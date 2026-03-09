@@ -37,6 +37,7 @@ In this repository, we present:
 
 ## Table of Contents
 
+- [News](#news)
 - [Project Status](#project-status)
 - [Installation](#installation)
 - [Repository Structure](#repository-structure)
@@ -48,6 +49,11 @@ In this repository, we present:
 - [Acknowledgement](#acknowledgement)
 - [Contact Us](#contact-us)
 ---
+
+## News
+
+- 2026/03/07: We release the real-world deployment code of CAT!
+- 2026/01/08: We release the official implementation of CAT!
 
 ## Project Status
 
