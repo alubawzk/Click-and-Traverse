@@ -4,16 +4,16 @@
 
 [中文](README_zh.md) | [English](README.md)
 
-:page_with_curl:[Paper](https://arxiv.org/abs/2601.16035) | :house:[Website](https://axian12138.github.io/CAT/) | :film_projector:[Video](https://www.youtube.com/watch?v=blek__Qf0Vc)
+📃[Paper](https://arxiv.org/abs/2601.16035) | 🏠[Website](https://axian12138.github.io/CAT/) | 📽[Video](https://www.youtube.com/watch?v=blek__Qf0Vc)
+
 </div>
 
 This repository provides the **official implementation** of the paper:
 
-> **Collision-Free Humanoid Traversal in Cluttered Indoor Scenes**  
-> *Han Xue et al.*  
-> arXiv preprint: [arXiv:2601.16035](https://arxiv.org/abs/2601.16035).<br>
+> **Collision-Free Humanoid Traversal in Cluttered Indoor Scenes**
+> *Han Xue et al.*
+> arXiv preprint: [arXiv:2601.16035](https://arxiv.org/abs/2601.16035).`<br>`
 > project page: [https://axian12138.github.io/CAT/](https://axian12138.github.io/CAT/).
-
 
 The project addresses the problem of enabling humanoid robots to safely traverse **cluttered indoor scenes**, which we define as environments that simultaneously exhibit:
 
@@ -41,27 +41,28 @@ In this repository, we present:
 - [Project Status](#project-status)
 - [Installation](#installation)
 - [Repository Structure](#repository-structure)
-- [Hybrid Obstacle Generation & HumanoidPF](#hybrid-obstacle-generation--humanoidpf)
+- [Hybrid Obstacle Generation &amp; HumanoidPF](#hybrid-obstacle-generation--humanoidpf)
 - [Traversal Skill Learning](#traversal-skill-learning)
 - [Related Projects](#related-projects)
 - [Citation](#citation)
 - [License](#license)
 - [Acknowledgement](#acknowledgement)
 - [Contact Us](#contact-us)
+
 ---
 
 ## News
 
-- 2026/03/07: We release the real-world deployment code of CAT!
+- 2026/03/07: We release the real-world deployment code of CAT! Please refer to deploy/Click-and-Traverse-SLAM for details.
 - 2026/01/08: We release the official implementation of CAT!
 
 ## Project Status
 
-- [x] 🧩 Procedural obstacle generation and HumanoidPF construction
-- [x] 🧩 Specialist policy training code
-- [x] 🗂️ Pre-trained specialist models and scene data
-- [x] 🧩 Real-world deployment code
-- [x] 🧩 Real-to-sim contruction for sim2sim test and real-scene finetuning
+- [X] 🧩 Procedural obstacle generation and HumanoidPF construction
+- [X] 🧩 Specialist policy training code
+- [X] 🗂️ Pre-trained specialist models and scene data
+- [X] 🧩 Real-world deployment code
+- [X] 🧩 Real-to-sim contruction for sim2sim test and real-scene finetuning
 - [ ] 🧩 Specialist-to-generalist policy distillation code
 - [ ] 🗂️ Pre-trained generalist models
 - [ ] 🗂️ Expanded scene datasets
@@ -137,7 +138,7 @@ Click-and-Traverse/
 ├── deploy/                         # Real-world deployment
 │   ├── gx_loco_deploy/             # deploy helpers
 │   ├── scripts/
-|   |   └── exp_dis_pf/             
+|   |   └── exp_dis_pf/           
 │   └── slam_ws/                    # clone from git
 └── procedural_obstacle_generation/ # Obstacle generation
     ├── main.py
@@ -156,7 +157,7 @@ Two categories of obstacle scenes are supported:
 - **Typical obstacles**: manually designed, semantically meaningful scenes
 - **Random obstacles**: procedurally generated scenes with controllable difficulty
 
-HumanoidPF representations are generated synchronously for all scenes. 
+HumanoidPF representations are generated synchronously for all scenes.
 
 Outputs are saved to:
 
@@ -179,6 +180,7 @@ generate_typical_obstacle(obs_name)
 ```
 
 Parameters:
+
 - `obs_name`: the obstacle configuration (see comments in `main.py`).
 
 ### Generate Random Obstacles
@@ -197,7 +199,6 @@ Parameters:
 - `dG`: ground obstacle difficulty
 - `dO`: overhead obstacle difficulty
 
-
 ---
 
 ## Traversal Skill Learning
@@ -212,6 +213,7 @@ python train_batch.py
 ```
 
 If you want to train a specific experiment, you can run:
+
 ```bash
 python -m train_ppo --task {task} --restore_name {restore_name} --exp_name {exp_name}  --ground {ground} --lateral {lateral} --overhead {overhead} --term_collision_threshold {term_collision_threshold} --obs_path {obs_path}
 ```
@@ -224,6 +226,7 @@ Supported tasks:
 Refer to `train_batch.py` for args details.
 
 ### brax2onnx
+
 `train_batch.py` will automatically convert checkpoints to ONNX format. But if you customize the policy architecture, you may need to convert checkpoints to ONNX manually:
 
 ```bash
@@ -235,11 +238,13 @@ python -m cat_ppo.eval.brax2onnx \
 ### Evaluation
 
 To evaluate the model without privileged observation, run:
+
 ```bash
 python -m cat_ppo.eval.mj_onnx_play --task G1Cat --exp_name 12051223_G1LocoPFR10_OdonoiseSlowV2_xP2xMxK00xlowcorner --obs_path data/assets/TypiObs/lowcorner
 ```
 
 To evaluate the model with privileged observation, run:
+
 ```bash
 python -m cat_ppo.eval.mj_onnx_play --task G1CatPri --pri --exp_name G1CatPri_narrow1 --obs_path data/assets/TypiObs/narrow1
 ```
@@ -278,11 +283,12 @@ This project is released under the terms of the LICENSE file included in this re
 ---
 
 ## Acknowledgement
+
 We thank the MuJoCo Playground for providing a convenient simulation framework.
 
 ---
 
-# Contact Us 
+# Contact Us
 
 If you'd like to discuss anything, feel free to send an email to xue-h21@mails.tsinghua.edu.cn or add WeChat: xh15158435129.
 
