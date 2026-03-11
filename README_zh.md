@@ -1,8 +1,8 @@
- `<div align="center">`
+ <div align="center">
 
 <h1 align="center"><img src="assets/icon.png" width="40" style="vertical-align: middle;">  Click and Traverse </h1>
   <h3 align="center"> 清华 · 银河通用 </h3>
-
+ </div>
 [中文](README_zh.md) | [English](README.md)
 
 📃[论文](https://arxiv.org/abs/2601.16035) | 🏠[项目主页](https://axian12138.github.io/CAT/) | 📽[视频](https://www.youtube.com/watch?v=blek__Qf0Vc)
