@@ -1,6 +1,7 @@
 <div align="center">  
   <h1 align="center"><img src="assets/icon.png" width="40" style="vertical-align: middle;">  Click and Traverse </h1>
   <h3 align="center"> Tsinghua · GALBOT </h3>
+  </div>
 
 [中文](README_zh.md) | [English](README.md)
 
