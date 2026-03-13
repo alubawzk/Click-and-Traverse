@@ -60,12 +60,11 @@
 - [X] 🧩 程序化障碍生成与 HumanoidPF 构建
 - [X] 🧩 专家策略训练代码
 - [X] 🗂️ 预训练专家模型与场景数据
-- [X] 🧩 真机部署代码
+- [X] 🚀 真机部署代码
 - [X] 🧩 真机到仿真场景采集（用于验证实验与微调）
 - [ ] 🧩 专家到通用策略的蒸馏代码
 - [ ] 🗂️ 预训练通用模型
 - [ ] 🗂️ 扩展的场景数据集
-- [ ] 🚀 Sim-to-Real 部署工具
 
 ---
 
@@ -110,6 +109,7 @@ python -m cat_ppo.utils.mj_playground_init
 可下载的预训练 checkpoint 与场景资源：
 
 - **Google Drive**: https://drive.google.com/drive/folders/1q57nJJ6uC26RmmCuxYjv6q1zE1gnVFvr
+- **Huggingface**: https://huggingface.co/Axian12138/Click-and-Traverse
 
 将下载的数据放置于 `data/` 目录下。
 

@@ -61,12 +61,11 @@ In this repository, we present:
 - [X] 🧩 Procedural obstacle generation and HumanoidPF construction
 - [X] 🧩 Specialist policy training code
 - [X] 🗂️ Pre-trained specialist models and scene data
-- [X] 🧩 Real-world deployment code
+- [X] 🚀 Real-world deployment code
 - [X] 🧩 Real-to-sim contruction for sim2sim test and real-scene finetuning
 - [ ] 🧩 Specialist-to-generalist policy distillation code
 - [ ] 🗂️ Pre-trained generalist models
 - [ ] 🗂️ Expanded scene datasets
-- [ ] 🚀 Sim-to-real deployment utilities
 
 ---
 
@@ -111,6 +110,7 @@ python -m cat_ppo.utils.mj_playground_init
 Pre-trained checkpoints and scene assets can be downloaded from:
 
 - **Google Drive**: https://drive.google.com/drive/folders/1q57nJJ6uC26RmmCuxYjv6q1zE1gnVFvr
+- **Huggingface**: https://huggingface.co/Axian12138/Click-and-Traverse
 
 Place downloaded data under the `data/` directory.
 
