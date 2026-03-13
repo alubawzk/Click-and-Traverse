@@ -110,8 +110,12 @@ python -m cat_ppo.utils.mj_playground_init
 
 Pre-trained checkpoints and scene assets can be downloaded from:
 
-- **Google Drive**: https://drive.google.com/drive/folders/1q57nJJ6uC26RmmCuxYjv6q1zE1gnVFvr
-- **Huggingface**: https://huggingface.co/Axian12138/Click-and-Traverse
+- **Google Drive**: 
+  - https://drive.google.com/drive/folders/1q57nJJ6uC26RmmCuxYjv6q1zE1gnVFvr
+
+- **Huggingface**: 
+  - Models (logs): https://huggingface.co/Axian12138/Click-and-Traverse
+  - Datasets (assets): https://huggingface.co/datasets/Axian12138/Click-and-Traverse
 
 Place downloaded data under the `data/` directory.
 
