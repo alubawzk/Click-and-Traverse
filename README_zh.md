@@ -113,6 +113,9 @@ python -m cat_ppo.utils.mj_playground_init
 - **Google Drive**: 
   - https://drive.google.com/drive/folders/1q57nJJ6uC26RmmCuxYjv6q1zE1gnVFvr
 
+- **清华云盘**:
+  - https://cloud.tsinghua.edu.cn/d/5a6b3c27259d4ae5b1dd/
+
 - **Huggingface**: 
   - Models (logs): https://huggingface.co/Axian12138/Click-and-Traverse
   - Datasets (assets): https://huggingface.co/datasets/Axian12138/Click-and-Traverse
