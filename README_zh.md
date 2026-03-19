@@ -218,7 +218,13 @@ generate_random_obstacle(difficulty, seed, dL, dG, dO)
 export PATH=/usr/local/cuda-12.5/bin:$PATH
 source .env
 source .venv/bin/activate
-python train_batch.py
+python train_batch.py --num-timesteps 1000000
+```
+
+如果你想训练某个指定实验，可以运行：
+
+```bash
+python -m train_ppo --task {task} --restore_name {restore_name} --exp_name {exp_name} --num-timesteps {num_timesteps} --ground {ground} --lateral {lateral} --overhead {overhead} --term_collision_threshold {term_collision_threshold} --obs_path {obs_path}
 ```
 
 支持的任务：
@@ -226,7 +232,7 @@ python train_batch.py
 - `G1Cat`：默认任务（便于直接上真机）
 - `G1CatPri`：带特权观测的任务（对蒸馏到通用策略有更有帮助）
 
-详见 `train_batch.py` 中的参数说明。
+详见 `train_batch.py` 中的参数说明。`train_batch.py --num-timesteps ...` 会覆盖所有任务的训练步数；如果你只想改某个任务，也可以直接修改 `tasks` 里的 `num_timesteps` 字段。
 
 `train_batch.py` 会自动将 checkpoints 转换为 ONNX 格式；如果你更改了策略结构，可能需要手动转换：
 

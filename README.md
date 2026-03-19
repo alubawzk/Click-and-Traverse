@@ -217,13 +217,13 @@ Parameters:
 export PATH=/usr/local/cuda-12.5/bin:$PATH
 source .env
 source .venv/bin/activate
-python train_batch.py
+python train_batch.py --num-timesteps 1000000
 ```
 
 If you want to train a specific experiment, you can run:
 
 ```bash
-python -m train_ppo --task {task} --restore_name {restore_name} --exp_name {exp_name}  --ground {ground} --lateral {lateral} --overhead {overhead} --term_collision_threshold {term_collision_threshold} --obs_path {obs_path}
+python -m train_ppo --task {task} --restore_name {restore_name} --exp_name {exp_name} --num-timesteps {num_timesteps} --ground {ground} --lateral {lateral} --overhead {overhead} --term_collision_threshold {term_collision_threshold} --obs_path {obs_path}
 ```
 
 Supported tasks:

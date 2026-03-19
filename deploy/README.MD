@@ -167,7 +167,7 @@ python -m cat_ppo.eval.mj_onnx_play --task G1Cat --exp_name exp_name --obs_path 
 ### finetuning
 Replace obs_path when train ppo:
 ```bash
-python -m train_ppo --task {task} --restore_name {restore_name} --exp_name {exp_name}  --ground {ground} --lateral {lateral} --overhead {overhead} --term_collision_threshold {term_collision_threshold} --obs_path {obs_path}
+python -m train_ppo --task {task} --restore_name {restore_name} --exp_name {exp_name} --num-timesteps {num_timesteps} --ground {ground} --lateral {lateral} --overhead {overhead} --term_collision_threshold {term_collision_threshold} --obs_path {obs_path}
 ```
 
 You can set `restore_name` to `none` if you want to train from scratch.
